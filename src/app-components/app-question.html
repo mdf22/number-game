@@ -1,0 +1,27 @@
+<template>
+    <div>
+        <app-indicator></app-indicator>
+    </div>
+    <div>
+        <h3 innerhtml.bind="apiService.currentText"></h3>
+    </div>
+    <div class="center-align">
+        <span repeat.for="num of apiService.currentQuestion.numbers">
+            <button class="btn btn-small btn-grey" click.delegate="doClick(num)" disabled.bind="apiService.lock">
+                ${num}
+            </button>
+        </span>
+    </div>
+    <br>
+    <div class="center-align">
+        <button class="btn btn-large" if.bind="apiService.nextOn" click.delegate="doNewQuestion()">
+            Next Question.
+        </button>
+        <span>
+            <h4 class="red-text" if.bind="apiService.newGameOver">Game over</h4>
+        </span>
+        <button class="btn btn-large" if.bind="apiService.newGameOn" click.delegate="doNewGame()">
+            New game
+        </button>
+    </div>
+</template>

@@ -1,0 +1,17 @@
+# EditorConfig is awesome: https://EditorConfig.org
+# top-most EditorConfig file
+root = true
+# Indentation override for all JS under src directory
+[src/**.js]
+indent_style = tab
+indent_size = 2
+end_of_line = lf
+insert_final_newline = true
+charset = utf-8
+# Indentation override for all TS under src directory
+[src/**.ts]
+indent_style = tab
+indent_size = 2
+end_of_line = lf
+insert_final_newline = true
+charset = utf-8

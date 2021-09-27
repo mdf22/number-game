@@ -1,0 +1,5 @@
+<template>
+    <div>
+        <span repeat.for="segment of apiService.indicator" class="segment ${segment.error ? 'error' : ''} ${segment.success ? 'success' : ''}">&nbsp;</span>
+    </div>
+</template>

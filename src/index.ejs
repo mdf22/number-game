@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html color-mode="light" lang="en">
+<head >
+    <script type="application/javascript">
+      const staticMap = JSON.parse('<%=  JSON.stringify(webpack.assetsByChunkName)  %>')
+      function onChunkLoad(src) {
+            console.log('LOAD', src)
+      }
+    </script>
+    <meta charset="utf-8">
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
+
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, minimal-ui" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-barstyle" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="color-scheme" content="dark light">
+    <title></title>
+</head>
+<body aurelia-app="main" >
+<div id="app-loader">
+    <style id="app-loader-style" scoped type="">
+        #app-loader {
+            position: absolute;
+            background: rgba(0,0,0,0.5);
+            top    : 0;
+            bottom : 0;
+            left   : 0;
+            right  : 0;
+            z-index:329999;
+            display: none;
+        }
+        #loader-panel {
+            text-align: center;
+            display: inline-block;
+            background-color: lavender;
+            padding: 25px;
+            margin: 0;
+            min-width: 280px;
+            font-size: 30px;
+            letter-spacing: 20px;
+            font-weight: bolder;
+            color: #582758;
+            border: 2px solid lightgray;
+            box-shadow: 0 0 5px rgba(0,0,0,0.5);
+            border-radius: 5px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            z-index:32001;
+        }
+    </style>
+    <div id="loader-panel">
+
+        <svg width='120px' height='120px' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="uil-ring-alt">
+            <rect x="0" y="0" width="100" height="100" fill="none" class="bk"></rect>
+            <circle cx="50" cy="50" r="40" stroke="#afafb7" fill="none" stroke-width="10" stroke-linecap="round"></circle>
+            <circle cx="50" cy="50" r="40" stroke="#582758" fill="none" stroke-width="6" stroke-linecap="round">
+                <animate attributeName="stroke-dashoffset" dur="2s" repeatCount="indefinite" from="0" to="502"></animate>
+                <animate attributeName="stroke-dasharray" dur="2s" repeatCount="indefinite" values="150.6 100.4;1 250;150.6 100.4"></animate>
+            </circle>
+        </svg>
+
+        <div>LOADING</div>
+    </div>
+    <script id="app-loader-starter" type="application/javascript">
+      document.getElementById('app-loader').style.display = 'block';
+    </script>
+
+</div>
+</body>
+</html>

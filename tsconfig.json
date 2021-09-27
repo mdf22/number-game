@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "sourceMap": false,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "noImplicitAny": false,
+    "moduleResolution": "node",
+    "target": "es5",
+    "module": "esnext",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "allowJs": true,
+    "baseUrl": "./src",
+    "lib": [
+      "es2017", "es2015", "dom"
+    ]
+  },
+  "types": [
+    "jasmine",
+    "node"
+  ],
+  "include": ["src/**/*"],
+  "exclude": [
+    "public",
+    "node_modules",
+    "**/*.spec.ts"
+  ]
+}
+

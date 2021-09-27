@@ -1,0 +1,41 @@
+@import "style/materialize";
+
+.amber-text {
+  color: #ffb300;
+}
+.amber-green {
+  color: #418f0a;
+}
+.red-text {
+  color: #8f1a0a;
+}
+.btn-grey {
+  background-color: #e0e0e0;
+}
+
+app-indicator {
+  width: 100%;
+  height: 1rem;
+  display: block;
+  > div {
+    width: 100%;
+    height: 1rem;
+    padding: 0;
+    margin: 0;
+    .segment {
+      width: 4%;
+      height: 1rem;
+      padding: 0;
+      margin: 1px;
+      background-color: #d9d7d7;
+      display: inline-block;
+      &.success {
+        background-color: #0f9d58;
+      }
+      &.error {
+        background-color: #E53935;
+      }
+    }
+  }
+
+}
